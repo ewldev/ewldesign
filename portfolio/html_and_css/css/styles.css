@@ -1,0 +1,133 @@
+/*
+font-family: 'Merriweather Sans', sans-serif;
+font-family: 'Lato', sans-serif;
+*/
+
+body {
+	background-color: #98c5d6;
+	background-image: url(../images/asfalt-dark.png);
+	background-attachment: fixed;
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+}
+
+header {
+    background-color: lightcoral;
+	font-size: 25px;
+	text-align: center; 
+	letter-spacing: 7px;
+	/*margin: auto;*/
+	word-spacing: 12px;
+    border-bottom: 5px solid red;
+	padding: 5px 0;
+}
+
+h1 {
+	font-family: 'Merriweather Sans', sans-serif;
+}
+
+nav {
+	background-color: lightgray;
+	margin: 0px;
+	padding: 1px 0;
+}
+
+nav ul {
+	list-style: none;
+	text-align: center;
+	/*padding-left: 0;*/
+	word-spacing: 55px;
+	letter-spacing: 5px;
+}
+
+nav li {
+	display: inline;
+}
+
+nav a {
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: 600;
+	color: darkblue;
+}
+
+#container {
+	max-width: 800px;
+	margin: auto;
+	padding: 20px;
+}
+
+aside {
+	font-size: 22px;
+	text-align: center;
+	float: right;
+    max-width: 300px;/*to convert px to em, divide px width by 16. 300 divided by 16 = 18.75 em*/
+    background-color: lightgrey;
+    /*padding: .1em;*/
+    border: .5em solid #3125d6;
+	margin-right: 3em;
+	margin-top: .3em;
+}
+
+main {
+	display: block; /*fallback for older IE*/
+}
+
+main h2 {
+	margin-top: 8%;
+}
+
+.home {
+    display: inline-block;
+    max-width: 31%;
+	padding: 2%;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+table, td, th{
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 5px 10px;
+}
+
+table {
+    border: 4px solid blue;
+	margin-top: 2em;
+	margin-bottom: 4em;
+}
+
+th {
+    background-color: lightgray;
+}
+
+#brown {
+	color: brown;
+}
+
+footer {
+	background-color: lightslategrey;
+	text-align: center;
+	padding: 5px 0;
+	
+}	
+
+/*-----------------About----------------*/
+
+#time h3 {
+	margin-bottom: 0;/*eliminating space between h3 and p*/
+}
+
+#time p {
+	margin-top: 0;/*eliminating space between h3 and p*/
+}	
+
+/*-----------------Contact---------------*/
+
+#drive h3 {
+	margin-bottom: 0;
+}
+
+#drive p {
+	margin-top: 0;
+}	

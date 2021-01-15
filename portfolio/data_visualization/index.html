@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/c3.min.css">
+
+    <title>Mental Health Awareness</title>
+  </head>
+  <body>
+    <header class="jumbotron bg-info">
+      <h1 class="text-center">Mental Health Awareness</h1>
+      <h2 class="h4 text-center">We need your support!</h2>
+	  </header>
+  
+    <div class="container border border-danger bg-warning pt-2 mb-4">
+       <p>Nowadays more than one out of ten teenagers are having some kind of mental health issues and that number is on the rise. We really need to address the problem and try to prevent any tragic from happening.</p>
+       <p>
+       We need your support so we can maintain our teen support groups and programs. 
+        </p>
+    </div>
+
+	<div class="container">
+		<div class="row">
+      <div class="col-11 border border-danger rounded m-auto pt-3"> <!--For some reason the C3 Timeseries chart is having problem showing all digits of the last value on the x-axis, unless it is set to col-11 or more, but then the more the screen size decreases the more the last value will be hidden. The Timeseries chart example from C3js.org seems to be having a similar issue -->
+				<h3 class="h5">Major Depressive Episode (MDE) and MDE with Severe Impairmnet in the Past Year among Youths Aged 12 to 17: </h3>
+        <div id="chart1"></div> <!--C3-->
+        <p>Data sourced from: <a href="https://www.samhsa.gov/data/sites/default/files/cbhsq-reports/NSDUHffrBriefingSlides2018_w-final-cover.pdf" target="blank">2018 National Survey on
+          Drug Use and Health</a> (pg.45) - U.S. Department of Health and Human Services</p>
+      </div> <!-- close .col-6 -->
+		</div> <!-- close .row -->
+	</div>	<!-- close .container -->
+
+  <section class="container my-4 py-2 p-3 mb-5">
+    <h4>Data visualization library review</h4>
+      <div class="container border border-secondary pt-2">
+        <div class="row">
+          <div class="col-lg-6">          
+            <h5><a href="https://www.chartjs.org/" target="blank">1) Chart.js</a></h5>
+            <p>ChartJs is a popular open-source library which is free, it lets you build responsive charts using HTML5 Canvas elements.<br>
+            Currently it supports 8 basic chart types plus animations.<br>
+            You can also mix and match line and barcharts to combine different datasets.<br>
+            It was released in 2017 and updated regularly.<br>
+            During set up, the basic chart from 'getting started' worked as advertized, but the documentation was not easy to follow at all when trying to add options. So I would not recommend this library over C3 to my client.   
+            </p>
+          </div>  
+          <div class="col-lg-6">
+            <canvas id="myChart"></canvas> <!--ChartJS-->
+            <p>Data sourced from: <a href="https://www.samhsa.gov/data/sites/default/files/cbhsq-reports/NSDUHffrBriefingSlides2018_w-final-cover.pdf" target="blank">2018 National Survey on
+            Drug Use and Health</a> (pg.46) - U.S. Department of Health and Human Services</p>     
+          </div>     
+        </div>  <!-- close .row -->     
+      </div> <!-- close .container -->   
+    
+    <div class="container border border-secondary mt-3">
+        <div class="row">
+          <div class="col-lg-6 pt-2">
+            <h5><a href="http://recharts.org/en-US/" target="blank">2) Recharts</a></h5>
+            <p>Rechart is built on React components and uses D3 under the hood.<br>
+             It is free, SVG based, with great documentation that makes it easy to setup responsive charts.<br>
+            It has been around since 2015 and is being actively developed, there is an online community for support but the owner doesn't answer questions frequently.<br>
+            </p>
+          </div>  
+          <div class="col-lg-6 pt-2">
+              <h5><a href="https://uber.github.io/react-vis/" target="blank">3) React-vis</a></h5> 
+              <p>React-vis is another React based visualization library created by Uber that lets you build responsive charts.<br>
+              It is free with straightforward documentation and is very easy to use.<br>
+              The stlying is kind of minimal but is highly customizable.
+              It was first created in 2015 and the last update was two months ago.   
+              </p>       
+          </div>     
+        </div>  <!-- close .row -->     
+      </div> <!-- close .container -->
+    </section>  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
+	<script src="js/c3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> 
+  <script src="js/main.js"></script>  
+</body>
+</html>

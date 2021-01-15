@@ -1,0 +1,824 @@
+/* 1. BASELINE - NORMALIZE RESET: css/normalize.css */
+
+/* 2.  LINK TO 3RD PARTY ASSETS - GOOGLE FONTS */
+/*
+font-family: 'Lato', sans-serif;
+font-family: 'Playfair Display', serif;
+*/
+
+/******************************
+3. HOUSEKEEPING
+*******************************/
+
+
+:root {
+    font-size: 100%;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box; 
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/******************************
+4. GRID SYSTEM
+*******************************
+*/  
+      
+
+.container {
+    padding: 0 0.5rem;
+}
+
+.row-fluid,
+.row-fixed {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.col {
+    padding: 1rem 0.5rem;
+    float: left;
+}
+
+.col-1-1,
+.col-2-2,
+.col-3-3,
+.col-4-4,
+.col-5-5,
+.col-6-6 {
+    width: 100%;
+}
+
+.col-5-6 {
+    width: 83.333333%
+}
+
+.col-4-5 {
+    width: 80%;
+}
+
+.col-3-4 {
+    width: 75%;
+}
+
+.col-2-3,
+.col-4-6 {
+    width: 66.666666%;
+}
+
+.col-3-5 {
+    width: 60%;
+}
+
+.col-1-2,
+.col-2-4,
+.col-3-6 {
+    width: 50%;
+}
+
+.col-2-5 {
+    width: 40%;
+}
+
+.col-1-3,
+.col-2-6 {
+    width: 33.333333%;
+}
+
+.col-1-4 {
+    width: 25%;
+}
+
+.col-1-5 {
+    width: 20%;
+}
+
+.col-1-6 {
+    width: 16.666666%;
+}
+
+/******************************
+5. TYPOGRAPHIC SCALE
+******************************/
+
+.d1,
+.d2,
+.d3,
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.d1,
+.d2,
+.d3,
+h1,
+.h1 {
+    line-height: 1.1;
+}
+
+
+h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    line-height: 1.25;
+}
+
+.d1,
+.d2,
+.d3,
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    margin-top: 0.33em;
+    margin-bottom: 0.66em;
+    word-break: keep-all;  
+    white-space: normal;  
+}
+
+.d1 {
+    font-size: 55px; 
+    font-size: 3.4365rem; 
+}
+.d2 {
+    font-size: 48px;
+    font-size: 3rem;
+}
+.d3 {
+    font-size: 42px;
+    font-size: 2.625rem;
+}
+h1,
+.h1 {
+    font-size: 36px;
+    font-size: 2.25rem;
+}
+h2,
+.h2 {
+    font-size: 32px;
+    font-size: 2rem;
+}
+h3,
+.h3 {
+    font-size: 28px;
+    font-size: 1.75rem;
+}
+h4,
+.h4 {
+    font-size: 24px;
+    font-size: 1.5rem;
+}
+h5,
+.h5 {
+    font-size: 21px;
+    font-size: 1.3125rem;
+}
+h6,
+.h6,
+.intro {
+    font-size: 18px;
+    font-size: 1.125rem;
+}
+p {
+    font-size: 16px;
+    font-size: 1rem;
+}
+small {
+    font-size: 14px;
+    font-size: 0.875rem;
+}
+
+
+/******************************
+6. COMPONENTS
+******************************/
+
+.c-btn,
+.c-btn-sm,
+.c-btn-lg {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.6em;
+    border: none;
+    border-radius: 0.5em;
+    background-color: #bbb;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.25s ease-out;
+}
+
+
+.c-btn-sm {
+    padding: 0.45em;
+    font-size: 0.875rem;
+}
+.c-btn-lg {
+    padding: 0.75em;
+    font-size: 1.125rem;
+}
+
+.c-btn-submit {
+    background-color: steelblue;
+}
+.c-btn-submit:hover {
+    background-color: #e5308b;
+}
+
+.c-img-headshot {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.c-img-rounded-1x {
+    border-radius: 1em;
+}
+
+.c-img-rounded-3x {
+    border-radius: 15rem;
+}
+
+.c-img-aperture-sm {
+    height: 15vmax;
+}
+
+.c-img-aperture-md {
+    height: 20vmax;
+}
+.c-img-aperture-lg {
+    height: 25vmax;
+}
+/* Selects all classes with c-img-aperture in them and applies the following css properties */
+[class*="c-img-aperture"] {
+    overflow: hidden;
+    position: relative;
+}
+
+/* There's code further down in the RELATIONSHIPS Section that relates to the following */
+
+/* Dividing Lines */
+[class*="c-line-t"]::before {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 0.2em;
+    background-color: #eee;
+    margin-bottom: 0.66em;
+}
+.c-line-t-sm::before {
+    height: 0.1em;
+}
+.c-line-b-sm::after {
+    height: 0.1em;
+}
+.c-line-t-lg::before {
+    height: 0.3em;
+}
+.c-line-b-lg::after {
+    height: 0.3em;
+}
+
+
+/******************************
+7. MODULES
+******************************/
+
+.m-banner {
+    padding: 8rem 0.5rem 4rem;
+    min-height: 20rem;
+    overflow: hidden;
+    background-color: #a5a5a5;
+    background-size: cover;
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.75)
+      ),
+      url(../img/image-2_1920.jpg);
+    color: #ffffff;
+}
+
+/* Only use this if you have extra content in the banner */
+/*.m-banner-content {
+    margin: 0 auto;
+    padding: 25% 33.3333333333% 8.3333333333% 1.2rem;
+    overflow: hidden;
+  }
+*/
+
+/*** NAVIGATION ***/
+
+.nav,
+.nav-bar {
+    background-color: skyblue;
+}
+
+.nav-list {
+    background-color: inherit;
+}
+
+.nav::before,
+.nav::after {
+    display: block;
+    content: '';
+}
+
+.nav,
+  .nav::before,
+  .nav::after {
+    clear: both;
+}
+
+.nav-logo,
+  .nav-item,
+  .nav-list-item {
+    font-size: 1rem;
+    display: block;
+}
+
+.nav-logo,
+    .nav-item {
+    padding: 1em;
+}
+.nav-logo {
+    color: #fff;
+    font-weight: 700;
+}
+.nav-bar,
+.nav-list {
+    font-size: 0; /* Remove whitespace between <li> tags */
+    list-style: none;
+    padding-left: 0;
+} 
+.nav-item {
+    border-top: 1px solid rgba(255,255,255,0.25);
+    /* transition: background-color 0.5s; */
+}
+.nav-logo {
+    background-color: blue;
+}
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.nav-logo,
+    .nav-bar {
+        float: left;
+        width: 100%;
+    }
+.nav-bar,
+.nav-item {
+        display: inline-block;
+    }
+.nav-item {
+        border: none;
+    }
+
+
+/* There's code further down in the RELATIONSHIPS Section that relates to the following */
+
+/******************************
+8. HELPER/UTILITY CLASSES
+******************************/
+
+/* Float Clearing */
+.u-clearfix,
+.u-clearfix::before,
+.u-clearfix::after {
+    clear: both;
+}
+.u-clearfix::before,
+.u-clearfix::after {
+    display: block;
+    content: "";
+}
+
+.u-text-left {
+    text-align: left;
+}
+.u-text-center {
+    text-align: center;
+}
+.u-text-right {
+    text-align: right;
+}
+
+.u-pad-y-1x {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.u-pad-y-2x {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.u-pad-y-3x {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.u-pad-t-1x {
+    padding-top: 1rem;
+}
+.u-pad-t-2x {
+    padding-top: 2rem;
+}
+.u-pad-t-3x {
+    padding-top: 3rem;
+}
+.u-pad-b-3x {
+    padding-bottom: 3rem;
+}
+
+.u-mar-y-1x {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.u-mar-y-2x {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.u-mar-y-3x {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.u-mar-t-1x {
+    margin-top: 1rem;
+}
+.u-mar-t-2x {
+    margin-top: 2rem;
+}
+.u-mar-t-3x {
+    margin-top: 3rem;
+}
+
+.u-bg-sky-blue {
+    background-color: skyblue;
+}
+.u-bg-light-gray {
+    background-color: #eee;
+}
+.u-bg-dark-gray {
+    background-color: #666;
+}
+.u-text-light-gray {
+    color: #eee;
+}
+.u-text-dark-gray {
+    color: #666;
+}
+.u-text-dark-blue {
+    color: darkblue;
+}
+
+/******************************
+9. RELATIONSHIPS
+******************************/
+
+/* 
+Add margin-top to an image inside of a col
+
+.col *:first-child {
+    margin-top: 3rem;
+}
+
+@media screen and (min-width: 45rem) {
+    .col *:first-child {
+    margin-top: 0;
+    }
+}
+*/
+
+/* Add margin-top to nav-list-items that are next to each other */
+/* margin top is only applied to the second sibling */
+.nav-list-item + .nav-list-item {
+    margin-top: 0.66em;
+}
+
+/*****
+> immediately inside of
+~ sibling selector
++ immediately next to (doesn't apply to the first) 
+*****/
+
+/* Make img inside of an aperture expand to fill it */
+[class*="c-img-aperture"] img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/******************************
+10. MEDIA QUERIES
+******************************/
+
+/* SMALL VIEWPORTS */
+@media screen and (min-width: 25rem) {
+
+    /* Navigation 
+    .nav-logo,
+    .nav-bar {
+        float: left;
+        width: 100%;
+    }
+    .nav-bar,
+    .nav-item {
+        display: inline-block;
+    }
+    .nav-item {
+        border: none;
+    }
+    */
+    .container {
+        padding: 0 1rem;
+    }
+    .col {
+        padding: 1rem;
+        float: left;
+    }
+
+    .row-fixed {
+        max-width: 25rem;
+    }
+
+    .col-1-1-sm,
+    .col-2-2-sm,
+    .col-3-3-sm,
+    .col-4-4-sm,
+    .col-5-5-sm,
+    .col-6-6-sm {
+        width: 100%;
+    }
+    .col-5-6-sm {
+        width: 83.333333%;
+    }
+    .col-4-5-sm {
+        width: 80%;
+    }
+    .col-3-4-sm {
+        width: 75%;
+    }
+    .col-2-3-sm,
+    .col-4-6-sm {
+        width: 66.666666%;
+    }
+    .col-3-5-sm {
+        width: 60%;
+    }
+    .col-1-2-sm,
+    .col-2-4-sm,
+    .col-3-6-sm {
+        width: 50%;
+    }
+    .col-2-5-sm {
+        width: 40%;
+    }
+    .col-1-3-sm,
+    .col-2-6-sm {
+        width: 33.333333%;
+    }
+    .col-1-4-sm {
+        width: 25%;
+    }
+    .col-1-5-sm {
+        width: 20%;
+    }
+    .col-1-6-sm {
+        width: 16.666666%;
+    }
+    
+    /* Push-Pull */
+    [class*="push-"] {
+    margin-left: 0;
+        /* Resets the margin property of any previous push classes */
+    }
+    .push-1-sm {
+        margin-left: 8.333333%;
+    }
+    .push-2-sm {
+        margin-left: 16.666666%;
+    }
+    .push-3-sm {
+        margin-left: 25%;
+    }
+    .push-4-sm {
+        margin-left: 33.333333%;
+    }
+    .push-6-sm {
+        margin-left: 50%;
+    }
+}
+
+
+/* MEDIUM VIEWPORTS */
+@media screen and (min-width: 45rem) {
+  
+    
+    .nav-logo,
+    .nav-bar {
+        width: auto;
+    }
+    .nav-logo {
+        float: left;
+    }
+    .nav-bar {
+        float: right;
+    }
+    .nav-link {
+        font-size: 1rem;
+    }
+
+   
+    .row-fixed {
+        max-width: 45rem;
+    }
+
+   
+    .col-1-1-md,
+    .col-2-2-md,
+    .col-3-3-md,
+    .col-4-4-md,
+    .col-5-5-md,
+    .col-6-6-md {
+        width: 100%;
+    }
+    .col-5-6-md {
+        width: 83.333333%;
+    }
+    .col-4-5-md {
+        width: 80%;
+    }
+    .col-3-4-md {
+        width: 75%;
+    }
+    .col-2-3-md,
+    .col-4-6-md {
+        width: 66.666666%;
+    }
+    .col-3-5-md {
+        width: 60%;
+    }
+    .col-1-2-md,
+    .col-2-4-md,
+    .col-3-6-md {
+        width: 50%;
+    }
+    .col-2-5-md {
+        width: 40%;
+    }
+    .col-1-3-md,
+    .col-2-6-md {
+        width: 33.333333%;
+    }
+    .col-1-4-md {
+        width: 25%;
+    }
+    .col-1-5-md {
+        width: 20%;
+    }
+    .col-1-6-md {
+        width: 16.666666%;
+    }
+
+    /* Push-Pull */
+    [class*="push-"] {
+        margin-left: 0;
+        /* Resets the margin property of any previous push classes */
+    }
+    .push-1-md {
+        margin-left: 8.333333%;
+    }
+    .push-2-md {
+        margin-left: 16.666666%;
+    }
+    .push-3-md {
+        margin-left: 25%;
+    }
+    .push-4-md {
+        margin-left: 33.333333%;
+    }
+    .push-6-md {
+        margin-left: 50%;
+    }
+}
+
+/* LARGE VIEWPORTS */
+@media screen and (min-width: 65rem) {
+
+    /* Rows */
+    .row-fixed {
+        max-width: 65rem;
+    }
+
+    /* Columns */
+    .col-1-1-lg,
+    .col-2-2-lg,
+    .col-3-3-lg,
+    .col-4-4-lg,
+    .col-5-5-lg,
+    .col-6-6-lg {
+        width: 100%;
+    }
+    .col-5-6-lg {
+        width: 83.333333%;
+    }
+    .col-4-5-lg {
+        width: 80%;
+    }
+    .col-3-4-lg {
+        width: 75%;
+    }
+    .col-2-3-lg,
+    .col-4-6-lg {
+        width: 66.666666%;
+    }
+    .col-3-5-lg {
+        width: 60%;
+    }
+    .col-1-2-lg,
+    .col-2-4-lg,
+    .col-3-6-lg {
+        width: 50%;
+    }
+    .col-2-5-lg {
+        width: 40%;
+    }
+    .col-1-3-lg,
+    .col-2-6-lg {
+        width: 33.333333%;
+    }
+    .col-1-4-lg {
+        width: 25%;
+    }
+    .col-1-5-lg {
+        width: 20%;
+    }
+    .col-1-6-lg {
+        width: 16.666666%;
+    }
+
+    /* Push-Pull */
+    [class*="push-"] {
+        margin-left: 0;
+        /* Resets the margin property of any previous push classes */
+    }
+    .push-1-lg {
+        margin-left: 8.333333%;
+    }
+    .push-2-lg {
+        margin-left: 16.666666%;
+    }
+    .push-3-lg {
+        margin-left: 25%;
+    }
+    .push-4-lg {
+        margin-left: 33.333333%;
+    }
+    .push-6-lg {
+        margin-left: 50%;
+    }
+}

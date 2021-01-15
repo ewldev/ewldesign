@@ -1,0 +1,187 @@
+/*
+v1.1
+2019-10-30 23:13
+font-family: 'Merriweather Sans', sans-serif;
+font-family: 'Lato', sans-serif;
+*/
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+
+main {
+    display: block;
+    box-shadow: 10px 10px 5px grey;
+}
+
+header {
+    position: relative;
+}
+
+header img{
+    width: 100%;
+    height: auto;
+}
+
+/*target small size screen first*/
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+   
+nav {
+      position: absolute;
+      left: -5%;
+      top: 75%;  
+  }
+  
+nav ul {
+      list-style-type: none;
+      word-spacing: 5px;
+  }
+  
+nav li {
+      display: inline;
+  }
+  
+nav a {
+      font-size: 1em;
+      text-decoration: none;
+      color: black;
+  }
+
+h1 {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 1.5em;
+    position: absolute;
+    left: 2%;
+    top: -18%;   
+ }
+
+h2 {
+    background-color: skyblue;
+    padding: 1.2em 2.4em;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.list {
+    border: .1rem solid lightgrey;
+    padding: 15px;
+}
+
+.list p {
+    color: red;
+}
+
+footer {
+    background-color: rgb(224,115,12);
+    text-align: center;
+    padding: 1em;
+    color: white;
+}
+
+
+/*mid size screen*/
+@media screen and (min-width:768px){
+    .container {
+        max-width: 720px;
+      }
+    
+    h1 {
+        font-size: 2.5em;
+        position: absolute;
+        left: 3%;
+        top: -11%;   
+     }
+     
+     nav {
+         position: absolute;
+         left: -2%;
+         top: 68%;  
+    }
+              
+     nav a {
+         font-size: 1.5em;
+         text-decoration: none;
+         color: white;
+    }
+
+    #products {
+        display: grid;
+        grid-template-rows: auto auto; 
+        grid-template-columns: repeat(2,auto);
+        column-gap: 30px;
+        row-gap: 40px;
+        padding: 40px 0;
+    }
+    #pics {  /*about page*/
+        display: flex;
+        justify-content: space-between;
+        
+    }    
+}
+
+
+
+/*large screen size*/
+@media screen and (min-width: 1200px){
+    .container {
+        max-width: 1140px;
+      }
+    
+    h1 {
+    font-size: 3.6em;
+    position: absolute;
+    left: 5%;
+    top: 2%;   
+    }
+ 
+    nav {
+     position: absolute;
+     left: 2%;
+     top: 79%;  
+    }
+ 
+    nav ul {
+     letter-spacing: 5px;
+     word-spacing: 5px;
+    }
+ 
+    nav li {
+     display: inline;
+    }
+ 
+    nav a {
+     font-size:1.2em;
+     text-decoration: none;
+     color:white;
+    }
+
+    #products {
+    display: grid;
+	grid-template-rows: auto auto; 
+	grid-template-columns: repeat(3,auto);
+	column-gap: 30px;
+    row-gap: 40px;
+    padding: 40px 0;
+    }
+}
+
+
+/*===============About===================*/
+
+.container figure {
+    box-shadow: 10px 10px 5px grey;
+}
+
+iframe {
+    border: .2rem solid skyblue;
+}

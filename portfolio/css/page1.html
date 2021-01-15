@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+		<title>Tutorial on  V1</title>
+    <meta name="description" content="Tutorial version 1 on HTML CSS block level and inline elements, floating and clearing">
+		<meta name="keywords" content="Tutorial on HTML CSS block level and inline elements, floating and clearing">
+		<meta name="author" content="Ed Leung">
+    <link href="css/page1.css" rel="stylesheet" type="text/css">
+</head>    
+
+<body>
+	<header>
+		<h1>Tutorial on Block Level vs Inline Elements</h1>
+		<h1>Floating and Clearing</h1>
+			<nav>
+				<ul>
+					<li><a href="page1.html">Version One</a></li>
+					<li><a href="page2.html">Version Two</a></li>
+				</ul>	
+			</nav>
+	</header>
+
+<main>
+	
+	<Section>
+		
+		<h2>Block Level vs Inline Elements</h2>
+			<article>
+				<h3>Block Level Elements</h3><br>
+					<figure>							
+						<img src="images/block-elements.jpg" alt="block elements" height="240" width="360" title="block elements">
+						<!--image from https://codeburst.io/block-level-and-inline-elements-the-difference-between-div-and-span-2f8502c1f95b-->	
+						<figcaption>Fig 1.1 - Block Elements</figcaption>	
+					</figure><br>	
+						<ul>
+							<li>A Block level element is displayed like an imaginery rectangular box.</li>
+							<li>It takes up the whole width of the page, from left to right and does not share any space.</li>
+							<li>Each block element begins on a new line.</li>
+						</ul>
+			</article>	
+
+			<article>
+				<h3>Inline Elements</h3><br>	
+					<figure>
+						<img src="images/inline-elements.jpg" alt="inline elements" height="100" width="360" title="inline elements">
+						<!--image from https://codeburst.io/block-level-and-inline-elements-the-difference-between-div-and-span-2f8502c1f95b-->
+						<figcaption>Fig 1.2 - Inline Elements</figcaption>
+					</figure><br>	
+					<ul>	
+						<li>An inline element will only take up the space that is needed to display that element.</li>
+						<li>It does not cause any line breaks.</li>
+					</ul>	
+			</article>
+
+			<article>
+				<h3>Examples of Block Level and Inline Elements</h3><br>
+					<figure>	
+						<img src="images/block-and-inline-elements.jpg" alt="block and inline elements" height="360" width="640" title="block and inline elements">
+						<!--image from https://tutorial.techaltum.com/html-block-and-inline-elements.html --> 
+						<figcaption>Fig 1.3 - Block and Inline Elements chart</figcaption>
+					</figure>	
+			</article>	
+	</section>
+	
+	<section>
+			<h2>About Floating and Clearing</h2>
+			<article>
+				<h3>Floating</h3>
+					<p>You can use floats to pin or move elements to the left or right. When float is used on an element, it loses the block property and allows other elements to move up and share the space.</p>	
+					<p>Fig 2.1 shows a web layout with two floated elements and texts sharing the same space.</p><br>
+						<figure>	
+							<img src="images/web-text-wrap.jpg" alt="Float" title="float">
+							<!-- image from https://css-tricks.com/all-about-floats/ -->
+							<figcaption>Fig 2.1 - Web page with two floated elements</figcaption>
+						</figure><br>		
+					<p>You can use {float:left;} to float elements to the left; {float:right;} to the right.</p>
+					<p>Default value is {float:none;} and the element will not float.</p>
+					<p>{float:inherit;} will take the float value from the parent element.</p>
+			</article>
+		
+		<article>	
+			<h3>Clearing</h3>
+				<p>When float is used, you can use clear to control whether the space freed up will allow an element to share the space.</p>
+				<p>Fig 2.2 shows that after {clear:both;} or {clear:right;} is used, the free space beneath the side bar will not be occupied by the footer.</p><br>
+					<figure>
+						<img src="images/clearedfooter.jpg" alt="Cleared" title="clear" >
+						<!-- image from https://css-tricks.com/all-about-floats/ -->
+						<figcaption>Fig 2.2 - Clear example</figcaption>
+					</figure><br>
+				<p>Default value is {clear:none;} - allowing floating elements on both sides.</p>
+				<p>{clear:left;} - clearing floats from the left side.</p>
+				<p>{clear:right;} - clearing floats from the right side.</p>
+				<p>{clear:both;} - clearing floats from either the left or the right side.</p>
+				<p>{clear:inherit;} - the element inherits the clear value of its parent.</p>
+		</article>
+	
+		<article>
+			<h3>No Clear</h3>	
+				<p>Fig 2.3 shows that when clear is not used, the footer will move up and occupy the free space beneath the side bar.</p><br>
+				<figure>
+					<img src="images/unclearedfooter.jpg" alt="Uncleared" title="Uncleared" >
+					<!-- image from https://css-tricks.com/all-about-floats/ -->
+					<figcaption>Fig 2.3 - No Clear example</figcaption>
+				</figure>	
+		</article>		
+	
+	</section>
+	
+	<a href="#top">Back to top</a>	
+
+</main>
+		
+	<footer>
+		<small>&copy;Copyright Ed Leung 2019</small>
+	</footer>	
+	
+</body>
+</html> 
+
+<!--
+Tutorial contents were sourced from numerouse sites and then paraphrased.
+https://codeburst.io/block-level-and-inline-elements-the-difference-between-div-and-span-2f8502c1f95b--
+https://tutorial.techaltum.com/html-block-and-inline-elements.html
+https://css-tricks.com/all-about-floats/
+https://www.w3schools.com/cssref/pr_class_float.asp
+https://www.w3schools.com/cssref/pr_class_clear.asp
+
+Plagiarism checkers used:
+https://smallseotools.com/plagiarism-checker/
+result: 100% unique
+https://www.duplichecker.com/
+result: 100% unique
+-->
